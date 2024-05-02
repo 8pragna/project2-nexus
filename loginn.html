@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Our Place - Login</title>
+   <link rel="stylesheet" type="text/css" href="loginn.css">
+   <style>
+      body {
+         background-image: url('sigin.jpg');
+         background-image: url('sigin.jpg');
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    background-size: cover; /* Cover the entire screen */
+
+         font-family: "Times New Roman", Times, serif;
+         padding: 20px;
+         margin: 0;
+      }
+      .container {
+         width: 80%;
+         margin: 0 auto;
+      }
+      #login {
+         text-align: center;
+         margin-top: 50px;
+      }
+      #login h2 {
+         font-size: 24px;
+         margin-bottom: 20px;
+      }
+      #login form {
+         width: 50%;
+         margin: 0 auto;
+      }
+      #login form input[type="text"],
+      #login form input[type="password"],
+      #login form input[type="submit"] {
+         width: 100%;
+         margin-bottom: 10px;
+         padding: 8px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         box-sizing: border-box;
+      }
+      #login form input[type="submit"] {
+         background-color: #007bff; /* Blue color */
+         color: white;
+         cursor: pointer;
+      }
+      #login form input[type="submit"]:hover {
+         background-color: #0056b3; /* Darker blue on hover */
+      }
+      #login p {
+         margin-top: 20px;
+      }
+      #login p a {
+         text-decoration: none;
+         color: #333;
+         font-weight: bold;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <section id="login">
+         <h2>Login</h2>
+         <form action="#" method="post" id="loginForm">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+         </form>
+         <p id="welcomeMessage" style="display: none;">Welcome, User! <a href="menu.html">What do you want to order?</a></p>
+         <p id="newUserLink">New user? <a href="signin.html">Sign up here</a></p>
+      </section>
+   </div>
+
+   <script>
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+         event.preventDefault();
+         var username = document.getElementsByName("username")[0].value;
+         var password = document.getElementsByName("password")[0].value;
+
+         // Check if username and password match
+         if (username === password && username !== "" && password !== "") {
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("welcomeMessage").style.display = "block";
+            document.getElementById("newUserLink").style.display = "none"; // Hide the "New user?" link
+         } else {
+            alert("Incorrect username or password. Please try again.");
+         }
+      });
+   </script>
+</body>
+</html>

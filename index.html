@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Our Place - Today's Specials</title>
+   <link rel="stylesheet" type="text/css" href="javasc.css">
+   <style>
+      body {
+         font-family: "Arial", sans-serif;
+         background-image: url('basic3.jpg');
+      }
+      .container {
+         width: 80%;
+         margin: 0 auto;
+         padding: 20px;
+      }
+      header {
+         text-align: center;
+         padding: 20px 0;
+      }
+      nav ul {
+         list-style: none;
+         padding: 0;
+         text-align: center;
+      }
+      nav ul li {
+         display: inline;
+         margin-right: 20px;
+      }
+      nav ul li a {
+         text-decoration: none;
+         color: #333;
+         font-weight: bold;
+      }
+      nav ul li a[href$=".html"] {
+         color: blue; /* Change color to blue */
+         text-decoration: underline; /* Add underline */
+      }
+      #specials {
+         text-align: center;
+         margin-top: 50px;
+      }
+      #specials h2 {
+         font-size: 24px;
+         margin-bottom: 20px;
+      }
+      #specials ul {
+         list-style-type: none;
+         padding: 0;
+      }
+      #specials ul li {
+         margin-bottom: 10px;
+      }
+      footer {
+         text-align: center;
+         margin-top: 50px;
+      }
+      footer p {
+         font-size: 18px; /* Increased font size */
+         font-family: "MV Boli", cursive; /* Use MV Boli font */
+      }
+      /* 'Our Place' heading style */
+      #our-place {
+         font-family: "MV Boli", cursive; /* Use MV Boli font */
+         font-size: 48px;
+         color: green; /* Change color to green */
+         margin-bottom: 20px;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <header>
+         <h1>Welcome to <span id="our-place">Our Place</span></h1> <!-- Apply style to 'Our Place' -->
+      </header>
+      <nav>
+         <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Reservations</a></li> <!-- New link -->
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="loginn.html">Login</a></li>
+         </ul>
+      </nav>
+      <section id="specials">
+         <h2>Today's Specials</h2>
+         <ul>
+            <li>Tiramisu</li>
+            <li>Chicken Mexican Salad</li>
+            <li>Baklava</li>
+            <li>Croissant</li>
+            <li>Panna Cotta</li>
+            <li>Pasta</li>
+            <li>Pizza</li>
+         </ul>
+      </section>
+      <footer>
+         <p>Thank you for choosing us.</p>
+         <p>This is the right choice.</p>
+         <p>Hope you have a good day.</p>
+      </footer>
+   </div>
+</body>
+</html>

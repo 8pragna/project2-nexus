@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Place - Reservation</title>
+  <link rel="stylesheet" type="text/css" href="javasc.css">
+  <style>
+    body {
+      background-image: url('basic1.jpg');
+      font-family: "Times New Roman", Times, serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      width: 50%;
+      margin: 0 auto;
+    }
+    #reservation-form {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #reservation-form h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #reservation-form input[type="number"],
+    #reservation-form input[type="date"],
+    #reservation-form input[type="text"],
+    #reservation-form input[type="tel"],
+    #reservation-form input[type="submit"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    #reservation-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    #reservation-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    #success-message {
+      display: none; /* Initially hidden */
+      background-color: #dff0d8;
+      color: #3c763d;
+      border: 1px solid #d6e9c6;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section id="reservation-form">
+      <h2>Reservation Form</h2>
+      <form id="reservationForm">
+        <input type="number" name="number-of-people" placeholder="Number of People" required><br>
+        <input type="date" name="reservation-date" required><br>
+        <input type="text" name="customer-name" placeholder="Your Name" required><br>
+        <input type="tel" name="phone-number" placeholder="Your Phone Number" required><br>
+        <input type="submit" value="Reserve">
+      </form>
+      <div id="success-message">Successfully reserved. Thank you!</div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("reservationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Show success message and hide the form
+        document.getElementById("reservation-form").style.display = "none";
+        document.getElementById("success-message").style.display = "block";
+      });
+    });
+  </script>
+</body>
+</html>
